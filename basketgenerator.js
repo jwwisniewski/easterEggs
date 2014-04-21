@@ -18,10 +18,10 @@ app.get('/basket/:min/:max/:limit', function(req, res) {
 
 	var basket = [];
 	
-	var basketLenght = getRandomInt(1, parseInt(req.params.limit), true);
+	var basketLenght = getRandomInt(1, parseInt(req.params.limit));
 
 	while (basket.length < basketLenght) {
-		var newValue = getRandomInt(parseInt(req.params.min), parseInt(req.params.max), false);
+		var newValue = getRandomInt(parseInt(req.params.min), parseInt(req.params.max));
 		if (basket.indexOf(newValue) === -1) {
 			basket[basket.length] = newValue;
 		} else {
