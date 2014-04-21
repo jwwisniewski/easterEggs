@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Easter Egg App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+		<script src="js/angular.min.js" type="text/javascript"></script>
+		<script src="js/controller.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+  </head>
+  <body>
+		<div ng-app="EasterApp">
+			<ul ng-controller="RabbitsHole" class="rabbitsHole">
+				<li>
+					<button ng-click="fillBaskets()">Fill Rabbit's Hole</button>
+				</li>
+				<li class="basket" ng-repeat="basket in baskets">
+					<div ng-repeat="egg in basket | orderBy:identity:true" class="egg" style="-webkit-animation-delay: {{($index * 0.1)}}s; margin-left: -{{($index + 1) * 51}}px; background: -webkit-radial-gradient(15px 15px, circle, #{{PaintEgg(egg, 1)}}, #{{PaintEgg(egg, 2)}});" >
+						{{egg}}
+					</div>					
+				</li>
+			</ul>
+
+			<ul ng-controller="Meadow" class="meadow">
+				<li>
+					<button ng-click="fillBaskets()">Fill Baskets</button>
+					<button ng-click="setShowMatchingAll()">Show baskets matching all eggs</button>
+					<button ng-click="setShowMatchingOne()">Show baskets matching 1 egg</button>
+					<button ng-click="setShowAll()">Reset filter</button> | Selected filter: {{activeFilterDescription}}
+				</li>
+				<li class="basket" ng-repeat="basket in baskets | filter:activeFilter">
+					<div ng-repeat="egg in basket | orderBy:identity:true" class="egg" style="-webkit-animation-delay: {{($index * 0.2)}}s; margin-left: -{{($index + 1) * 51}}px; background: -webkit-radial-gradient(15px 15px, circle, #{{PaintEgg(egg, 1)}}, #{{PaintEgg(egg, 2)}});" >
+						{{egg}}
+					</div>					
+				</li>
+			</ul>
+		</div>
+  </body>
+</html>

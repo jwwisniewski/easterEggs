@@ -1,0 +1,71 @@
+html{
+	height: 100%;
+	background: -webkit-radial-gradient(center, ellipse cover, #9dd53a 0%,#7cbc0a 100%); /* Chrome10+,Safari5.1+ */
+}
+.rabbitsHole, .meadow{
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+.basket {
+	margin: 0;
+	padding: 0;
+	
+	position: relative;
+	
+	height: 165px;
+}
+.egg {
+	width: 50px;
+	height: 70px;	
+	border-radius: 50%/60% 60% 40% 40%;
+	line-height: 70px;	
+	
+	position: absolute;
+	left: -100%;
+	top: 0;
+
+	-webkit-animation: move 2s ease-out;
+	-webkit-animation-fill-mode: forwards;
+
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-shadow: 0px 0px 2px #000;
+}
+
+@-webkit-keyframes roll {
+	0% {
+	}
+	100% {
+		-webkit-transform: rotate(1440deg);
+	}
+}
+@-webkit-keyframes move {
+	16%, 48%, 78% {
+		top: 95px;
+		-webkit-animation-timing-function: ease-out;
+	}
+	32% {
+		top: 0px;
+		-webkit-animation-timing-function: ease-in;
+	}
+	62% {
+		top: 50px;
+		-webkit-animation-timing-function: ease-in;
+	}
+	85% {
+		top: 90px;
+		-webkit-animation-timing-function: ease-in;
+	}
+	90% {
+		-webkit-animation-timing-function: ease-out;
+		top: 95px;
+	}
+	100% {
+		-webkit-transform: rotate(1440deg);
+		-webkit-animation-timing-function: ease-out;
+		left:100%;
+		top: 95px;
+	}
+}
