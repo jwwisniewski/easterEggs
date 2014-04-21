@@ -2,10 +2,10 @@
   "name": "EasterEggApp",
   "description": "1 Rabbit 10 Baskets Match Eggs",
   "version": "0.0.3",
-	"author": "Jakub Wisniewski <j.w.wisniewski@gmail.com>",
+	"author": "Jakub Wiśniewski",
   "private": true,
   "dependencies": {
-    "express": "*",
-    "express-params": "*"
+    "express": "4.x.x",
+    "express-params": "0.x.x"
   }
 }
