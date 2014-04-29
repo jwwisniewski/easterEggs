@@ -1,0 +1,27 @@
+{
+  "name": "easterEggs",
+  "version": "0.0.4",
+  "homepage": "https://github.com/jwwisniewski/easterEggs",
+  "authors": [
+    "Jakub Wisniewski <j.w.wisniewski@gmail.com>"
+  ],
+  "description": "A simple AngularJS, node.js and CSS3 showcase",
+  "main": "index.html",
+  "keywords": [
+    "css3",
+    "angular",
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16"
+  }
+}
